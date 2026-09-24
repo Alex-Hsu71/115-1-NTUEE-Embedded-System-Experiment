@@ -1,0 +1,22 @@
+# 編譯輸出目錄與快取檔
+build/
+bin/
+obj/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# 編譯產生的二進位執行檔
+*.elf
+*.bin
+*.hex
+*.map
+*.o
+*.d
+
+# OS 與編輯器產生的雜檔
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/ipch/

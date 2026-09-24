@@ -1,0 +1,16 @@
+# 忽略所有編譯產出物與快取
+**/build/
+**/CMakeFiles/
+**/*.elf
+**/*.bin
+**/*.hex
+**/*.o
+**/*.d
+
+# 忽略大型官方 Shared 函式庫
+STM32CubeL4/
+
+# 忽略 IDE 雜檔
+.vscode/
+**/.settings/
+**/.clangd
