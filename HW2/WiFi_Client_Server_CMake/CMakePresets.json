@@ -1,0 +1,42 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "base-arm",
+      "hidden": true,
+      "generator": "Ninja",
+      "toolchainFile": "${sourceDir}/cmake/arm-none-eabi.cmake",
+      "environment": {
+        "PATH": "C:/ST/STM32CubeIDE_2.2.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin;C:/msys64/mingw64/bin;$penv{PATH}"
+      }
+    },
+    {
+      "name": "arm-debug",
+      "displayName": "ARM GCC Debug",
+      "inherits": "base-arm",
+      "binaryDir": "${sourceDir}/build/arm-debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "arm-release",
+      "displayName": "ARM GCC Release",
+      "inherits": "base-arm",
+      "binaryDir": "${sourceDir}/build/arm-release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "build-debug",
+      "configurePreset": "arm-debug"
+    },
+    {
+      "name": "build-release",
+      "configurePreset": "arm-release"
+    }
+  ]
+}
