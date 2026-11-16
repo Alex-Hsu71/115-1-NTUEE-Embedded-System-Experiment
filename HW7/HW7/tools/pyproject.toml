@@ -1,0 +1,13 @@
+[project]
+name = "hw7-tools"
+version = "0.1.0"
+description = "PC-side tools for HW7 CMSIS-DSP (FIR design, test-signal verification, live plot)"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=2.0",
+    "matplotlib>=3.9",
+    "pyserial>=3.5",
+]
+
+[tool.uv]
+package = false
